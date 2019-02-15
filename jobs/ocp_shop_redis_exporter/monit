@@ -1,0 +1,5 @@
+check process ocp_shop_redis_exporter
+  with pidfile /var/vcap/sys/run/ocp_shop_redis_exporter/ocp_shop_redis_exporter.pid
+  start program "/var/vcap/jobs/ocp_shop_redis_exporter/bin/ocp_shop_redis_exporter_ctl start"
+  stop program "/var/vcap/jobs/ocp_shop_redis_exporter/bin/ocp_shop_redis_exporter_ctl stop"
+  group vcap

@@ -1,0 +1,1 @@
+<%= p('ocp_shop_redis_exporter.redis.script', '') %>%
