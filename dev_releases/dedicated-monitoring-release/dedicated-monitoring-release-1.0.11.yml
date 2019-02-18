@@ -1,0 +1,24 @@
+name: dedicated-monitoring-release
+version: 1.0.11
+commit_hash: "4874422"
+uncommitted_changes: true
+jobs:
+- name: digitial_cap_redis_exporter
+  version: 03cf938c2b82745d1071730ffc902e0cfc82d55b
+  fingerprint: 03cf938c2b82745d1071730ffc902e0cfc82d55b
+  sha1: 07b3d35b65e41a55e94f0212d61dcebd1bfcc364
+- name: ocp_shop_redis_exporter
+  version: 83d0d9837a6e5322c024a41a9b9185c24854b1d2
+  fingerprint: 83d0d9837a6e5322c024a41a9b9185c24854b1d2
+  sha1: c60baf55a8312c04c059e63bec634e3c4e066a74
+packages:
+- name: digitial_cap_redis_exporter
+  version: f987ae20974dd381434457d0841f4e32773b256c
+  fingerprint: f987ae20974dd381434457d0841f4e32773b256c
+  sha1: bbb7dab12ff6622ebf2c4bc1863e4bc03209721a
+  dependencies: []
+- name: ocp_shop_redis_exporter
+  version: 314574bf0047820d399ea08ea69f99f3fae88f09
+  fingerprint: 314574bf0047820d399ea08ea69f99f3fae88f09
+  sha1: 94b72380137df20cbf912b382e3db51584df9f47
+  dependencies: []

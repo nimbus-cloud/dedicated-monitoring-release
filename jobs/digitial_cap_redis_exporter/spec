@@ -1,0 +1,40 @@
+---
+name: digitial_cap_redis_exporter
+
+packages:
+  - digitial_cap_redis_exporter
+
+templates:
+  bin/digitial_cap_redis_exporter_ctl: bin/digitial_cap_redis_exporter_ctl
+  config/script: config/script
+
+properties:
+  digitial_cap_redis_exporter.redis.check_keys:
+    description: "Comma separated list of key-patterns to export value and length/size, searched for with SCAN"
+  digitial_cap_redis_exporter.redis.check_single_keys:
+    description: "Comma separated list of single keys to export value and length/size"
+  digitial_cap_redis_exporter.debug:
+    description: "Output verbose debug information"
+    default: false
+  digitial_cap_redis_exporter.log_format:
+    description: "Log format, valid options are txt and json"
+  digitial_cap_redis_exporter.namespace:
+    description: "Namespace for metrics"
+  digitial_cap_redis_exporter.redis_only_metrics:
+    description: "Whether to export go runtime metrics also"
+    default: false
+  digitial_cap_redis_exporter.redis.address:
+    description: "Address of one or more redis nodes, separated by separator"
+  digitial_cap_redis_exporter.redis.alias:
+    description: "Redis instance alias for one or more redis nodes, separated by separator"
+  digitial_cap_redis_exporter.redis.password:
+    description: "Password for one or more redis nodes, separated by separator"
+  digitial_cap_redis_exporter.redis.script:
+    description: "Lua Redis script for collecting extra metrics"
+  digitial_cap_redis_exporter.redis.separator:
+    description: "separator used to split redis.addr and redis.password into several elements"
+  digitial_cap_redis_exporter.web.port:
+    description: "Port on which to expose web interface and telemetry"
+    default: "9121"
+  digitial_cap_redis_exporter.web.telemetry_path:
+    description: "Path under which to expose metrics"

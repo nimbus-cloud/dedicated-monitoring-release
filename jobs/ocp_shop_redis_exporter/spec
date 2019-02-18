@@ -1,5 +1,5 @@
 ---
-name: ocp_shop_ocp_shop_redis_exporter
+name: ocp_shop_redis_exporter
 
 packages:
   - ocp_shop_redis_exporter

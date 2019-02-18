@@ -1,0 +1,5 @@
+---
+name: digitial_cap_redis_exporter
+
+files:
+  - digitial_cap_redis_exporter/digitial_cap_redis_exporter-v0.22.1.linux-amd64.tar.gz

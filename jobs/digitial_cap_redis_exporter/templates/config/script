@@ -1,0 +1,1 @@
+<%= p('digitial_cap_redis_exporter.redis.script', '') %>%

@@ -1,0 +1,5 @@
+---
+name: ocp_shop_redis_exporter
+
+files:
+  - ocp_shop_redis_exporter/ocp_shop_redis_exporter-v0.22.1.linux-amd64.tar.gz

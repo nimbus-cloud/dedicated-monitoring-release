@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -eux
+
+# Extract ocp_shop_redis_exporter package
+mkdir -p ${BOSH_INSTALL_TARGET}/bin
+tar xzvf ${BOSH_COMPILE_TARGET}/ocp_shop_redis_exporter/ocp_shop_redis_exporter-v0.22.1.linux-amd64.tar.gz -C ${BOSH_INSTALL_TARGET}/bin
