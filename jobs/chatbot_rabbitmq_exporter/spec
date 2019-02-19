@@ -5,7 +5,7 @@ packages:
   - chatbot_rabbitmq_exporter
 
 templates:
-  bin/rabbitmq_exporter_ctl: bin/rabbitmq_exporter_ctl
+  bin/chatbot_rabbitmq_exporter_ctl: bin/chatbot_rabbitmq_exporter_ctl
   config/ca_cert.pem: config/ca_cert.pem
 
 properties:
