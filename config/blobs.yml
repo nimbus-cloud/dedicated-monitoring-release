@@ -1,9 +1,1 @@
-common/utils.sh:
-  size: 2821
-  sha: fca7fa6aa60b72e1277f2d2185d23303280c5823
-digitial_cap_redis_exporter/digitial_cap_redis_exporter-v0.22.1.linux-amd64.tar.gz:
-  size: 4243236
-  sha: f65a6bba40fe73fe7411584aad9d9898b1b2dea5
-ocp_shop_redis_exporter/ocp_shop_redis_exporter-v0.22.1.linux-amd64.tar.gz:
-  size: 4243236
-  sha: f65a6bba40fe73fe7411584aad9d9898b1b2dea5
+{}
