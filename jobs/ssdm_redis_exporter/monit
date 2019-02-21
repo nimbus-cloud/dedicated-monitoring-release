@@ -1,0 +1,5 @@
+check process ssdm_redis_exporter
+  with pidfile /var/vcap/sys/run/ssdm_redis_exporter/ssdm_redis_exporter.pid
+  start program "/var/vcap/jobs/ssdm_redis_exporter/bin/ssdm_redis_exporter_ctl start"
+  stop program "/var/vcap/jobs/ssdm_redis_exporter/bin/ssdm_redis_exporter_ctl stop"
+  group vcap

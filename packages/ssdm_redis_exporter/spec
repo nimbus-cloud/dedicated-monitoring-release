@@ -1,0 +1,5 @@
+---
+name: ssdm_redis_exporter
+
+files:
+  - ssdm_redis_exporter/ssdm_redis_exporter-v0.22.1.linux-amd64.tar.gz
