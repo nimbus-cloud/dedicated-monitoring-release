@@ -1,0 +1,5 @@
+check process mysky_postgres_exporter
+  with pidfile /var/vcap/sys/run/mysky_postgres_exporter/mysky_postgres_exporter.pid
+  start program "/var/vcap/jobs/mysky_postgres_exporter/bin/mysky_postgres_exporter_ctl start"
+  stop program "/var/vcap/jobs/mysky_postgres_exporter/bin/mysky_postgres_exporter_ctl stop"
+  group vcap

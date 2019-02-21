@@ -1,0 +1,60 @@
+#!/usr/bin/env bash
+
+set -eu
+
+RUN_DIR=/var/vcap/sys/run/mysky_postgres_exporter
+LOG_DIR=/var/vcap/sys/log/mysky_postgres_exporter
+TMP_DIR=/var/vcap/sys/tmp/mysky_postgres_exporter
+STORE_DIR=/var/vcap/store/mysky_postgres_exporter
+mkdir -p ${RUN_DIR} ${LOG_DIR} ${TMP_DIR} ${STORE_DIR}
+
+PIDFILE=${RUN_DIR}/mysky_postgres_exporter.pid
+
+source /var/vcap/packages/mysky_postgres_exporter/common/utils.sh
+exec 1>> ${LOG_DIR}/$(basename "$0").stdout.log
+exec 2>> ${LOG_DIR}/$(basename "$0").stderr.log
+
+export PATH=/var/vcap/packages/mysky_postgres_exporter/bin:${PATH}
+
+case $1 in
+  start)
+    pid_guard ${PIDFILE} "mysky_postgres_exporter"
+    echo $$ > ${PIDFILE}
+
+    export DATA_SOURCE_NAME="<%= p('mysky_postgres_exporter.datasource_name') %>"
+
+    exec mysky_postgres_exporter \
+      <% if_p('mysky_postgres_exporter.constant_labels') do |constant_labels| %> \
+      --constantLabels="<%= constant_labels %>" \
+      <% end %> \
+      <% if_p('mysky_postgres_exporter.custom_queries') do %> \
+      --extend.query-path="/var/vcap/jobs/mysky_postgres_exporter/config/custom_queries.sql" \
+      <% end %> \
+      <% if_p('mysky_postgres_exporter.log_format') do |log_format| %> \
+      --log.format="<%= log_format %>" \
+      <% end %> \
+      <% if_p('mysky_postgres_exporter.log_level') do |log_level| %> \
+      --log.level="<%= log_level %>" \
+      <% end %> \
+      --web.listen-address=":<%= p('mysky_postgres_exporter.web.port') %>" \
+      <% if_p('mysky_postgres_exporter.web.telemetry_path') do |telemetry_path| %> \
+      --web.telemetry-path="<%= telemetry_path %>" \
+      <% end %> \
+      <% if p('mysky_postgres_exporter.disable_default_metrics')  %> \
+      --disable-default-metrics \
+      <% end %> \
+      >>  ${LOG_DIR}/mysky_postgres_exporter.stdout.log \
+      2>> ${LOG_DIR}/mysky_postgres_exporter.stderr.log
+    ;;
+
+  stop)
+    kill_and_wait ${PIDFILE}
+    ;;
+
+  *)
+    echo "Usage: $0 {start|stop}"
+    exit 1
+    ;;
+
+esac
+exit 0
