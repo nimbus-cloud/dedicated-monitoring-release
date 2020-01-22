@@ -1,6 +1,0 @@
----
-name: chatbot_rabbitmq2_exporter
-
-files:
-  - common/utils.sh
-  - chatbot_rabbitmq2_exporter/chatbot_rabbitmq2_exporter-0.29.0.linux-amd64.tar.gz

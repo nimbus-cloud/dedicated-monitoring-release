@@ -1,0 +1,52 @@
+---
+name: chatbot_rabbitmq_2_hem_exporter
+
+packages:
+  - chatbot_rabbitmq_2_hem_exporter
+
+templates:
+  bin/chatbot_rabbitmq_2_hem_exporter_ctl: bin/chatbot_rabbitmq_2_hem_exporter_ctl
+  config/ca_cert.pem: config/ca_cert.pem
+
+properties:
+  chatbot_rabbitmq_2_hem_exporter.log_level:
+    description: "Log level ('debug', 'info', 'warning', 'error', 'fatal', or 'panic')"
+  chatbot_rabbitmq_2_hem_exporter.output_format:
+    description: "Log output format"
+  chatbot_rabbitmq_2_hem_exporter.exporters:
+    description: "List of enabled modules ('connections', 'exchange', 'node', 'overview', 'queue')"
+
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.hem_url: 
+    description: "RabbitMQ url"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.hem_user:
+    description: "RabbitMQ user"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.hem_password:
+    description: "RabbitMQ password"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.slo_url: 
+    description: "RabbitMQ url"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.slo_user:
+    description: "RabbitMQ user"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.slo_password:
+    description: "RabbitMQ password"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.ca_cert:
+    description: "CA Certificate"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.include_queues:
+    description: "Regex, matching queue names are exported"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.skip_queues:
+    description: "Regex, matching queue names are not exported (useful for short-lived rpc queues)"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.skip_tls_verify:
+    description: "Will skip hostname/certificate check at all"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.capabilities:
+    description: "Comma-separated list of extended scraping capabilities supported by the target RabbitMQ server"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.timeout:
+    description: "Timeout in seconds for retrieving data from management plugin"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.max_queue:
+    description: "Max number of queues before we drop metrics"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.include_vhost:
+    description: "Reqgex vhost filter. Only queues in matching vhosts are exported"
+  chatbot_rabbitmq_2_hem_exporter.rabbitmq.skip_vhost:
+    description: "Regex, matching vhost names are not exported"
+
+  chatbot_rabbitmq_2_hem_exporter.web.port:
+    description: "Port on which to expose web interface and telemetry"
+    default: "9125"

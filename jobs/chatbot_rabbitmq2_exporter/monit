@@ -1,5 +1,0 @@
-check process chatbot_rabbitmq2_exporter
-  with pidfile /var/vcap/sys/run/chatbot_rabbitmq2_exporter/chatbot_rabbitmq2_exporter.pid
-  start program "/var/vcap/jobs/chatbot_rabbitmq2_exporter/bin/chatbot_rabbitmq2_exporter_ctl start"
-  stop program "/var/vcap/jobs/chatbot_rabbitmq2_exporter/bin/chatbot_rabbitmq2_exporter_ctl stop"
-  group vcap
