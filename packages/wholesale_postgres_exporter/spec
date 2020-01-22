@@ -1,0 +1,6 @@
+---
+name: wholesale_postgres_exporter
+
+files:
+  - common/utils.sh
+  - wholesale_postgres_exporter/wholesale_postgres_exporter_v0.4.7_linux-amd64.tar.gz

@@ -1,0 +1,1 @@
+<%= p('wholesale_postgres_exporter.custom_queries', '') %>

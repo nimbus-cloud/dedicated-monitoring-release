@@ -1,0 +1,5 @@
+check process wholesale_postgres_exporter
+  with pidfile /var/vcap/sys/run/wholesale_postgres_exporter/wholesale_postgres_exporter.pid
+  start program "/var/vcap/jobs/wholesale_postgres_exporter/bin/wholesale_postgres_exporter_ctl start"
+  stop program "/var/vcap/jobs/wholesale_postgres_exporter/bin/wholesale_postgres_exporter_ctl stop"
+  group vcap
