@@ -31,13 +31,13 @@ case $1 in
     export RABBIT_EXPORTERS="<%= exporters %>"
     <% end %>
 
-    <% if_p('chatbot_rabbitmq_2_hem_exporter.rabbitmq.url') do |url| %>
+    <% if_p('chatbot_rabbitmq_2_hem_exporter.rabbitmq.hem_url') do |url| %>
     export RABBIT_URL="<%= url %>"
     <% end %>
-    <% if_p('chatbot_rabbitmq_2_hem_exporter.rabbitmq.user') do |user| %>
+    <% if_p('chatbot_rabbitmq_2_hem_exporter.rabbitmq.hem_user') do |user| %>
     export RABBIT_USER="<%= user %>"
     <% end %>
-    <% if_p('chatbot_rabbitmq_2_hem_exporter.rabbitmq.password') do |password| %>
+    <% if_p('chatbot_rabbitmq_2_hem_exporter.rabbitmq.hem_password') do |password| %>
     export RABBIT_PASSWORD="<%= password %>"
     <% end %>
     <% if_p('chatbot_rabbitmq_2_hem_exporter.rabbitmq.ca_cert') do %>
