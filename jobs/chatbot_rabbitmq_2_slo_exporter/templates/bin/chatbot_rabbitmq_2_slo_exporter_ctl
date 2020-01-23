@@ -31,7 +31,7 @@ case $1 in
     export RABBIT_EXPORTERS="<%= exporters %>"
     <% end %>
 
-    <% if_p('chatbot_rabbitmq_2_slo_exporter.rabbitmq.slo.url') do |url| %>
+    <% if_p('chatbot_rabbitmq_2_slo_exporter.rabbitmq.slo_url') do |url| %>
     export RABBIT_URL="<%= url %>"
     <% end %>
     <% if_p('chatbot_rabbitmq_2_slo_exporter.rabbitmq.slo_user') do |user| %>
