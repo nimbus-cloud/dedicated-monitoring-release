@@ -22,12 +22,6 @@ properties:
     description: "RabbitMQ user"
   chatbot_rabbitmq_2_slo_exporter.rabbitmq.slo_password:
     description: "RabbitMQ password"
-  chatbot_rabbitmq_2_slo_exporter.rabbitmq.slo_url: 
-    description: "RabbitMQ url"
-  chatbot_rabbitmq_2_slo_exporter.rabbitmq.slo_user:
-    description: "RabbitMQ user"
-  chatbot_rabbitmq_2_slo_exporter.rabbitmq.slo_password:
-    description: "RabbitMQ password"
   chatbot_rabbitmq_2_slo_exporter.rabbitmq.ca_cert:
     description: "CA Certificate"
   chatbot_rabbitmq_2_slo_exporter.rabbitmq.include_queues:
