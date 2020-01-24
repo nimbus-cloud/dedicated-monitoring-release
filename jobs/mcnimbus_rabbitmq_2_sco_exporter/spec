@@ -1,0 +1,46 @@
+---
+name: mcnimbus_rabbitmq_2_sco_exporter
+
+packages:
+  - mcnimbus_rabbitmq_2_sco_exporter
+
+templates:
+  bin/mcnimbus_rabbitmq_2_sco_exporter_ctl: bin/mcnimbus_rabbitmq_2_sco_exporter_ctl
+  config/ca_cert.pem: config/ca_cert.pem
+
+properties:
+  mcnimbus_rabbitmq_2_sco_exporter.log_level:
+    description: "Log level ('debug', 'info', 'warning', 'error', 'fatal', or 'panic')"
+  mcnimbus_rabbitmq_2_sco_exporter.output_format:
+    description: "Log output format"
+  mcnimbus_rabbitmq_2_sco_exporter.exporters:
+    description: "List of enabled modules ('connections', 'exchange', 'node', 'overview', 'queue')"
+
+  mcnimbus_rabbitmq_2_sco_exporter.rabbitmq.hem_url: 
+    description: "RabbitMQ url"
+  mcnimbus_rabbitmq_2_sco_exporter.rabbitmq.hem_user:
+    description: "RabbitMQ user"
+  mcnimbus_rabbitmq_2_sco_exporter.rabbitmq.hem_password:
+    description: "RabbitMQ password"
+  mcnimbus_rabbitmq_2_sco_exporter.rabbitmq.ca_cert:
+    description: "CA Certificate"
+  mcnimbus_rabbitmq_2_sco_exporter.rabbitmq.include_queues:
+    description: "Regex, matching queue names are exported"
+  mcnimbus_rabbitmq_2_sco_exporter.rabbitmq.skip_queues:
+    description: "Regex, matching queue names are not exported (useful for short-lived rpc queues)"
+  mcnimbus_rabbitmq_2_sco_exporter.rabbitmq.skip_tls_verify:
+    description: "Will skip hostname/certificate check at all"
+  mcnimbus_rabbitmq_2_sco_exporter.rabbitmq.capabilities:
+    description: "Comma-separated list of extended scraping capabilities supported by the target RabbitMQ server"
+  mcnimbus_rabbitmq_2_sco_exporter.rabbitmq.timeout:
+    description: "Timeout in seconds for retrieving data from management plugin"
+  mcnimbus_rabbitmq_2_sco_exporter.rabbitmq.max_queue:
+    description: "Max number of queues before we drop metrics"
+  mcnimbus_rabbitmq_2_sco_exporter.rabbitmq.include_vhost:
+    description: "Reqgex vhost filter. Only queues in matching vhosts are exported"
+  mcnimbus_rabbitmq_2_sco_exporter.rabbitmq.skip_vhost:
+    description: "Regex, matching vhost names are not exported"
+
+  mcnimbus_rabbitmq_2_sco_exporter.web.port:
+    description: "Port on which to expose web interface and telemetry"
+    default: "9125"

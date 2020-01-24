@@ -1,0 +1,6 @@
+---
+name: mcnimbus_rabbitmq_2_sco_exporter
+
+files:
+  - common/utils.sh
+  - mcnimbus_rabbitmq_2_sco_exporter/mcnimbus_rabbitmq_2_sco_exporter-0.29.0.linux-amd64.tar.gz

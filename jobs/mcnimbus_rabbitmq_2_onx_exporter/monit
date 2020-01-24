@@ -1,0 +1,5 @@
+check process mcnimbus_rabbitmq_2_onx_exporter
+  with pidfile /var/vcap/sys/run/mcnimbus_rabbitmq_2_onx_exporter/mcnimbus_rabbitmq_2_onx_exporter.pid
+  start program "/var/vcap/jobs/mcnimbus_rabbitmq_2_onx_exporter/bin/mcnimbus_rabbitmq_2_onx_exporter_ctl start"
+  stop program "/var/vcap/jobs/mcnimbus_rabbitmq_2_onx_exporter/bin/mcnimbus_rabbitmq_2_onx_exporter_ctl stop"
+  group vcap
