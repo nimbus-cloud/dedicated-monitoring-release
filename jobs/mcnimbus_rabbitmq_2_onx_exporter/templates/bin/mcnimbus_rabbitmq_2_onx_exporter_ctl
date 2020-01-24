@@ -31,13 +31,13 @@ case $1 in
     export RABBIT_EXPORTERS="<%= exporters %>"
     <% end %>
 
-    <% if_p('mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.hem_url') do |url| %>
+    <% if_p('mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.onx_url') do |url| %>
     export RABBIT_URL="<%= url %>"
     <% end %>
-    <% if_p('mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.hem_user') do |user| %>
+    <% if_p('mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.onx_user') do |user| %>
     export RABBIT_USER="<%= user %>"
     <% end %>
-    <% if_p('mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.hem_password') do |password| %>
+    <% if_p('mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.onx_password') do |password| %>
     export RABBIT_PASSWORD="<%= password %>"
     <% end %>
     <% if_p('mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.ca_cert') do %>

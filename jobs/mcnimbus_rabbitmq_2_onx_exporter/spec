@@ -16,11 +16,11 @@ properties:
   mcnimbus_rabbitmq_2_onx_exporter.exporters:
     description: "List of enabled modules ('connections', 'exchange', 'node', 'overview', 'queue')"
 
-  mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.hem_url: 
+  mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.onx_url: 
     description: "RabbitMQ url"
-  mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.hem_user:
+  mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.onx_user:
     description: "RabbitMQ user"
-  mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.hem_password:
+  mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.onx_password:
     description: "RabbitMQ password"
   mcnimbus_rabbitmq_2_onx_exporter.rabbitmq.ca_cert:
     description: "CA Certificate"
