@@ -1,0 +1,6 @@
+---
+name: chatbot_mongodb_hem_exporter
+
+files:
+  - common/utils.sh
+  - chatbot_mongodb_hem_mongodb_exporter/chatbot_mongodb_hem_exporter-1.0.0.linux-amd64.tar.gz
