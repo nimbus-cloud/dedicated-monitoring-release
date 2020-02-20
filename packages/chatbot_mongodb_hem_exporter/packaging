@@ -6,6 +6,6 @@ set -eux
 mkdir -p ${BOSH_INSTALL_TARGET}/common
 cp -a ${BOSH_COMPILE_TARGET}/common/* ${BOSH_INSTALL_TARGET}/common
 
-# Extract chatbot_mongodb_hem_mongodb_exporter package
+# Extract chatbot_mongodb_hem_exporter package
 mkdir -p ${BOSH_INSTALL_TARGET}/bin
-tar xzvf ${BOSH_COMPILE_TARGET}/chatbot_mongodb_hem_mongodb_exporter/chatbot_mongodb_hem_mongodb_exporter-1.0.0.linux-amd64.tar.gz -C ${BOSH_INSTALL_TARGET}/bin
+tar xzvf ${BOSH_COMPILE_TARGET}/chatbot_mongodb_hem_exporter/chatbot_mongodb_hem_exporter-1.0.0.linux-amd64.tar.gz -C ${BOSH_INSTALL_TARGET}/bin
