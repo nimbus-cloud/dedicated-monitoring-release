@@ -1,5 +1,0 @@
-check process chatbot_mongodb_hem_exporter
-  with pidfile /var/vcap/sys/run/chatbot_mongodb_hem_exporter/chatbot_mongodb_hem_exporter.pid
-  start program "/var/vcap/jobs/chatbot_mongodb_hem_exporter/bin/chatbot_mongodb_hem_exporter_ctl start"
-  stop program "/var/vcap/jobs/chatbot_mongodb_hem_exporter/bin/chatbot_mongodb_hem_exporter_ctl stop"
-  group vcap
