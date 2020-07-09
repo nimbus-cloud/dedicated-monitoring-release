@@ -1,0 +1,6 @@
+---
+name: AnalyticsandPlanning_postgres_exporter
+
+files:
+  - common/utils.sh
+  - AnalyticsandPlanning_postgres_exporter/AnalyticsandPlanning_postgres_exporter_v0.4.7_linux-amd64.tar.gz

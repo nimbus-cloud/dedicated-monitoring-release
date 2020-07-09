@@ -1,0 +1,5 @@
+check process AnalyticsandPlanning_postgres_exporter
+  with pidfile /var/vcap/sys/run/AnalyticsandPlanning_postgres_exporter/AnalyticsandPlanning_postgres_exporter.pid
+  start program "/var/vcap/jobs/AnalyticsandPlanning_postgres_exporter/bin/AnalyticsandPlanning_postgres_exporter_ctl start"
+  stop program "/var/vcap/jobs/AnalyticsandPlanning_postgres_exporter/bin/AnalyticsandPlanning_postgres_exporter_ctl stop"
+  group vcap
