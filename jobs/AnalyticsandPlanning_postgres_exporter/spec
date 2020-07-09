@@ -1,0 +1,29 @@
+---
+name: AnalyticsandPlanning_postgres_exporter
+
+packages:
+  - AnalyticsandPlanning_postgres_exporter
+
+templates:
+  bin/AnalyticsandPlanning_postgres_exporter_ctl: bin/AnalyticsandPlanning_postgres_exporter_ctl
+  config/custom_queries.sql: config/custom_queries.sql
+
+properties:
+  AnalyticsandPlanning_postgres_exporter.datasource_name:
+    description: "The PostgresSQL server's data source name"
+  AnalyticsandPlanning_postgres_exporter.constant_labels:
+    description: "A list of label=value separated by comma(,)"
+  AnalyticsandPlanning_postgres_exporter.custom_queries:
+    description: "Custom queries to run"
+  AnalyticsandPlanning_postgres_exporter.log_format:
+    description: "Set the log target and format. Example: 'logger:syslog?appname=bob&local=7' or 'logger:stdout?json=true'"
+  AnalyticsandPlanning_postgres_exporter.log_level:
+    description: "Only log messages with the given severity or above. Valid levels: [debug, info, warn, error, fatal]"
+  AnalyticsandPlanning_postgres_exporter.web.port:
+    description: "Port on which to expose web interface and telemetry"
+    default: "9190"
+  AnalyticsandPlanning_postgres_exporter.web.telemetry_path:
+    description: "Path under which to expose Prometheus metrics"
+  AnalyticsandPlanning_postgres_exporter.disable_default_metrics:
+    description: "Disables PostgreSQL metrics and only uses custom_queries"
+    default: false
